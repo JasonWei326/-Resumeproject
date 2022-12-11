@@ -37,6 +37,7 @@ header nav ul li a {
 }
 
 main {
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
 }
@@ -51,6 +52,15 @@ main section.left h1 {
 main section.left p {
   font-size: 1.5rem;
   padding: 1rem 0rem;
+}
+main section.left p::before {
+  content: ">>";
+  color: #e08958;
+  -webkit-animation-name: arrow;
+          animation-name: arrow;
+  transition-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 main section.right {
   flex: 1 1 600px;
@@ -80,7 +90,7 @@ main section.table table tr td {
 }
 main section.table table tr:hover {
   background-color: #f4cfac;
-  transition: all 0.15s ease;
+  transition: all 0.2s ease;
 }
 main section.Pic {
   flex: 1 1 600px;
@@ -209,8 +219,20 @@ footer a {
   main section.form form div label {
     font-size: 1.25rem;
   }
-  main footer img {
-    width: 10vw;
-    height: 0vw;
+}
+@-webkit-keyframes arrow {
+  from {
+    color: #fa5f06;
+  }
+  to {
+    color: #ffaa79;
+  }
+}
+@keyframes arrow {
+  from {
+    color: #fa5f06;
+  }
+  to {
+    color: #ffaa79;
   }
 }/*# sourceMappingURL=style.css.map */
